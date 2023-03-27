@@ -31,10 +31,10 @@ app.use("/api/v1/users", require("./routes/userRoute"));
 app.use("/api/v1/transections", require("./routes/transectionRoutes"));
 
 //static files
-app.use(express.static(path.join(__dirname, "../build")));
+app.use(express.static(path.resole(__dirname, "../build")));
 
 app.get("*", function(req,res){
-  res.sendFile(path.join(__dirname,"./my-expense-tracker-frontend/build/index.html"));
+  res.sendFile(path.resolve(__dirname,"../build","/index.html"));
 });
 
 //port
