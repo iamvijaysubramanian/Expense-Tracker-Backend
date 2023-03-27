@@ -4,8 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const connectDb = require("./config/connectDb");
-const userRoute=require("./routes/userRoute");
-const transectionRoutes=require("./routes/transectionRoutes");
+
 
 
 //databse call
