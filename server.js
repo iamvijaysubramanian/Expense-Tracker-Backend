@@ -31,7 +31,7 @@ app.use("/api/v1/users", require("./routes/userRoute"));
 app.use("/api/v1/transections", require("./routes/transectionRoutes"));
 
 //static files
-app.use(express.static(path.resole(__dirname, "../build")));
+app.use(express.static(path.resolve(__dirname, "../build")));
 
 app.get("*", function(req,res){
   res.sendFile(path.resolve(__dirname,"../build","/index.html"));
