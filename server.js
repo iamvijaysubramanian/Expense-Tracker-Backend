@@ -1,10 +1,8 @@
 require("dotenv").config();
+const dotenv = require("dotenv");
 const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
-const dotenv = require("dotenv");
-const colors = require("colors");
-const path =require("path");
 const connectDb = require("./config/connectDb");
 const userRoute=require("./routes/userRoute");
 const transectionRoutes=require("./routes/transectionRoutes");
@@ -31,11 +29,11 @@ app.use("/api/v1/users", require("./routes/userRoute"));
 app.use("/api/v1/transections", require("./routes/transectionRoutes"));
 
 //static files
-app.use(express.static(path.resolve(__dirname, "../build")));
+// app.use(express.static(path.resolve(__dirname, "../build")));
 
-app.get("*", function(req,res){
-  res.sendFile(path.resolve(__dirname,"../build","/index.html"));
-});
+// app.get("*", function(req,res){
+//   res.sendFile(path.resolve(__dirname,"../build","/index.html"));
+// });
 
 //port
 const PORT =process.env.PORT || 8080;
